@@ -47,3 +47,17 @@ footer{
   background-color: #563D7C;
   color:white;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.container__post{
+  display: flex;
+  margin: 22px;
+}
+
+.posts__container__info{
+  margin-left: 22px;
+}
