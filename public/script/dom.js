@@ -5,6 +5,8 @@ const cancelBtn = document.querySelectorAll('.form-exit');
 const loginForm = document.querySelector('.login-form');
 const signupForm = document.querySelector('.signup-form');
 const createPostForm = document.querySelector('.create-post-form');
+const postsContainer = document.querySelector('.container');
+
 
 postFormBtn.addEventListener('click', () => {
   loginForm.style.display = 'none';
