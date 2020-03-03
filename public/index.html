@@ -7,6 +7,67 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <h3>Blogger</h3>
+    <div class="header--shortcuts">
+    <p class="show-create-post">Create Post</p>
+    <p class="show-login-form">Login</p>
+    <p class="show-signup-form">Sign Up</p>
+  </div>
+  </header>
+
+  <form action="/login" class="login-form form">
+    <fieldset class="form--fieldset">
+      <legend>Login:</legend>
+      
+      <label for="usernameForLogin">User Name:</label>
+      <input type="text" name="username" id="usernameForLogin" required>
+      <label for="passwordForLogin">Password</label>
+      <input type="password" name="password" id="passwordForLogin" required>
+      <input type="Submit" name="Login" required>
+      <p class="form-exit">cancel</p>
+      
+    </legend>
+    </fieldset>
+  </form>
+
+  <form action="/signup" class="signup-form form ">
+    <fieldset class="form--fieldset">
+      <legend>Sign Up:</legend>
+      
+      <label for="username">User Name:</label>
+      <input type="text" name="username" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+      <label for="confirmPassword">confirm Password:</label>
+      <input type="password" name="confirmPassword" id="confirmPassword" required>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+      <input type="Submit" name="Sign Up" required>
+      <p class="form-exit">cancel</p>
+      
+    </legend>
+    </fieldset>
+  </form>
+  <form action="/createPost" class="create-post-form form ">
+    <fieldset class="form--fieldset">
+      <legend>Create Post:</legend>
+      <label for="name">User Name:</label>
+      <input type="text" name="name" id="name" required>
+      <label for="image">Photo URL:</label>
+      <input type="url" name="image" id="image" required>
+      <label for="description">Tell us your story:</label>
+      <textarea name="description" id="description" cols="30" rows="10" >
+      </textarea>
+      <input type="Submit" name="Post" required>
+      <p class="form-exit">cancel</p>
+      
+    </legend>
+    </fieldset>
+  </form>
+  <main></main>
+  <footer>blogger 2020 &copy;
+  </footer>
   <script src="script/dom.js"></script>
   <script src="script/index.js"></script>  
 </body>
