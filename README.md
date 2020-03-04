@@ -15,11 +15,11 @@ by
 
 WHY
 ---
-Blogger is a unique way to share your idea and thoughts within our site, visitors can view all posts on the main page.and can post new
+Blogger is a unique way to share your idea and thoughts within our site, visitors can view all posts on the main page.and can create new posts.
 
 WHAT
 ---
-blogger is design with simplicty in mind, any visitors can browse all posts, you can login to share your posts to others. 
+blogger is designed with simplicity in mind, any visitors from all ages can browse our site, we add authentication to secure our site, it also gives login users more privileges like add posts. 
 
 
 HOW
@@ -30,10 +30,10 @@ We have divided our website into three sections. These sections as follow:
 
 2. "posts" section: This section contains all posts from our database that is built from clients' posts that saved on the database.
 
-3. "footer" section_: This  section displays credentials about the website.
+3. "footer" section_: This section displays credentials about the website.
 
-the posts are saved in server database usign postgresSql as shown below:
-
+the posts and users saved in the server database shown in the schema below:
+![Imgur](https://i.imgur.com/vzIwAMo.png)
 
 
 User story
@@ -42,16 +42,12 @@ User story
 ```
 As a client:
     - I can browse all posts in the databsse
-    - I can add a new new posts
+    - I can add a new posts
     - I can view the website on any device
     - my credentnails are secured
 
     
 As a blind:
-    - I wan't the website to be accessible through screen reader.
+    - I want to use screen reader on this site.
 
 ```
-
-
-
-###### tags: `recipe` `Database` `javaScript` `SQL`
