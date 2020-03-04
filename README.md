@@ -47,7 +47,7 @@ As a client:
     - my credentnails are secured
 
     
-As a blind:
+As a user with vision problems:
     - I want to use screen reader on this site.
 
 ```
