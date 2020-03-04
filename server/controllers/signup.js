@@ -21,7 +21,7 @@ const signup = (req, res, next) => {
         bcrypt.hash(req.body.password, salt, (error2, hash) => {
           if (error2) { console.log('ERROR PASSWORED HASHED', error2); } else {
             addUser(req.body, hash);
-            res.redirect('/login');
+            res.redirect('/');
           }
         });
       })
