@@ -26,7 +26,7 @@ HOW
 ---
 We have divided our website into three sections. These sections as follow:
 
-1. "Header" section: Header section: this section contains the site Logo. the header section contains links to login, sign up and create posts.
+1. "Header" section: this section contains the site Logo. the header section contains links to login, sign up and create posts.
 
 2. "posts" section: This section contains all posts from our database that is built from clients' posts that saved on the database.
 
