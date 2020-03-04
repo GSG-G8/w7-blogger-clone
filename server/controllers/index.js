@@ -5,10 +5,12 @@ const addUser = require('../Database/query/addUser');
 
 const posts = require('./posts');
 const addPost = require('./addPost');
+const login = require('./login');
 
 
 router.get('/posts', posts);
 router.post('/add-post', addPost);
+router.post('/login', login);
 
 
 router.post('/signup', (req, res, next) => {
@@ -28,7 +30,7 @@ router.post('/signup', (req, res, next) => {
         bcrypt.hash(req.body.password, salt, (error2, hash) => {
           if (error2) { console.log('ERROR PASSWORED HASHED', error2); } else {
             addUser(req.body, hash);
-            res.redirect('/');
+            res.redirect('/login');
           }
         });
       })
