@@ -5,7 +5,7 @@ const app = express();
 
 const { join } = require('path');
 const compression = require('compression');
-const router = require('./controllers');
+const router = require('../server/controllers');
 
 
 app.disable('x-powered-by');
