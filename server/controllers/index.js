@@ -11,22 +11,22 @@ router.post('/signup', (req, res, next) => {
     confirmPassword: Joi.ref('password'),
     email: Joi.string().email().required(),
   });
-  const { val } = schema.validate(req.body);
-  console.log(val);
-  // if (validationResult) {
-  //   bcrypt.genSalt(10)
-  //     .then((salt) => {
-  //       bcrypt.hash(req.body.password, salt, (error2, hash) => {
-  //         console.log(hash);
-  //         //       // addUser(req.body, hash);
-  //         res.redirect('/');
-  //       });
-  //     })
-  //     .catch(console.error);
-  // } else if (error) {
-  //   console.log('YOUR ERROR', error);
-  //   res.send('enter correct data');
-  // }
+  const { error, value } = schema.validate(req.body);
+  if (error) {
+    console.log('YOUR ERROR', error);
+    res.send('enter correct data');
+  } else {
+    bcrypt.genSalt(10)
+      .then((salt) => {
+        bcrypt.hash(req.body.password, salt, (error2, hash) => {
+          if (error2) { console.log('ERROR PASSWORED HASHED', error2); } else {
+            addUser(req.body, hash);
+            res.redirect('/');
+          }
+        });
+      })
+      .catch(console.error);
+  }
 });
 
 module.exports = router;
