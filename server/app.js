@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -9,6 +10,7 @@ const router = require('./controllers');
 
 app.disable('x-powered-by');
 app.use(compression());
+app.use(cookieParser());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
