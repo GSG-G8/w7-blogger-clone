@@ -3,6 +3,13 @@ const Joi = require('@hapi/joi');
 const bcrypt = require('bcryptjs');
 const addUser = require('../Database/query/addUser');
 
+const posts = require('./posts');
+const addPost = require('./addPost');
+
+
+router.get('/posts', posts);
+router.post('/add-post', addPost);
+
 
 router.post('/signup', (req, res, next) => {
   const schema = Joi.object({

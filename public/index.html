@@ -49,14 +49,14 @@
     </legend>
     </fieldset>
   </form>
-  <form action="/createPost" class="create-post-form form ">
+  <form action="/add-post" method="POST" class="create-post-form form ">
     <fieldset class="form--fieldset">
       <legend>Create Post:</legend>
-      <label for="name">Post Name:</label>
+      <label for="name">Title:</label>
       <input type="text" name="name" id="name" required>
       <label for="image">Photo URL:</label>
       <input type="url" name="image" id="image" required>
-      <label for="description">Tell us your story:</label>
+      <label for="description">Post Text:</label>
       <textarea name="description" id="description" cols="30" rows="10" >
       </textarea>
       <button type="submit">submit</button>
@@ -90,6 +90,6 @@
   <footer>blogger 2020 &copy;
   </footer>
   <script src="script/dom.js"></script>
-  <script src="script/index.js"></script>  
+  <script src="script/fetch.js"></script>  
 </body>
 </html>
