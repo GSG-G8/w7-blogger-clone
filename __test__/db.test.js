@@ -35,4 +35,3 @@ test('test getPosts query', () => getPosts()
       expect(actual).toEqual(expected);
     });
   });
-  
