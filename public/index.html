@@ -3,93 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogger</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>login</title>
+  <style>
+    .header{
+      text-align: center;
+    }
+    .access-container{
+      display: flex;
+      flex-direction: row;
+
+    }
+    #login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+    #login-form h1 {
+      text-align: center;
+      margin: 0 0 10px 0;
+    }
+    #login-form input {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+    }
+    #login-form input[type=submit] {
+      border: 0;
+      background: #4367c4;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h3>Blogger</h3>
-    <div class="header--shortcuts">
-    <p class="show-create-post">Create Post</p>
-    <p class="show-login-form">Login</p>
-    <p class="show-signup-form">Sign Up</p>
-  </div>
+  <header class="header">
+    
+    <h1>Welcome to Blogger</h1>
+    <h2>Please login to browse the website</h2>
   </header>
-
-  <form action="/login" method="POST" class="login-form form">
-    <fieldset class="form--fieldset">
-      <legend>Login:</legend>
-      
-      <label for="useremailForLogin">User E-mail:</label>
-      <input type="email" name="useremail" id="useremailForLogin" required>
-      <label for="passwordForLogin">Password</label>
-      <input type="password" name="password" id="passwordForLogin" required>
-      <button type="submit">submit</button>
-      <button type="button" class="form-exit">cancel</button>
-      
-    </legend>
-    </fieldset>
+  <section class="access-container">
+  <form id="login-form" action="/login" method="POST">
+    <h1>LOGIN</h1>
+    <input type="email" name="useremail" id="useremailForLogin" placeholder="Email Address" required/>
+    <input type="password" name="password" id="passwordForLogin"  placeholder="Password" required/>
+    <input type="submit" value="Sign In"/>
   </form>
 
-  <form action="/signup" method="POST" class="signup-form form ">
-    <fieldset class="form--fieldset">
-      <legend>Sign Up:</legend>
-      
-      <label for="username">User Name:</label>
-      <input type="text" name="username" id="username" required>
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" required>
-      <label for="confirmPassword">confirm Password:</label>
-      <input type="password" name="confirmPassword" id="confirmPassword" required>
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required>
-      <button type="submit">submit</button>
-      <button type="button" class="form-exit">cancel</button>
-      
-    </legend>
-    </fieldset>
-  </form>
-  <form action="/add-post" method="POST" class="create-post-form form ">
-    <fieldset class="form--fieldset">
-      <legend>Create Post:</legend>
-      <label for="name">Title:</label>
-      <input type="text" name="name" id="name" required>
-      <label for="image">Photo URL:</label>
-      <input type="url" name="image" id="image" required>
-      <label for="description">Post Text:</label>
-      <textarea name="description" id="description" cols="30" rows="10" >
-      </textarea>
-      <button type="submit">submit</button>
-      <button type="button" class="form-exit">cancel</button>
-      
-    </legend>
-    </fieldset>
-  </form>
-  <main>
-    <section class="container">
-      <article class="container__post">
-        <img src="https://via.placeholder.com/300" alt="">
-        <div class="posts__container__info">
-          <h2 class="title">title main lorem ipsum</h2>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quibusdam!</p>
-        </div>
-        
-      </article>
-      <article class="container__post">
-        <img src="https://via.placeholder.com/300" alt="">
-        <div class="posts__container__info">
-          <h2 class="title">title main lorem ipsum</h2>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quibusdam!</p>
-        </div>
-        
-      </article>
+  <form id="login-form" action="/signup" method="POST" >
+    <h1>Sign up</h1>
+    <input type="text" name="username" id="username" placeholder="Username" required/>
+    <input type="password" name="password"  placeholder="Password"required/>
+    <input type="password"name="confirmPassword" id="confirmPassword"  placeholder="confirm Password"  required>
+    <input type="email" name="email"  id="email" placeholder="Email" required>
 
-      
-    </section>
-  </main>
-  <footer>blogger 2020 &copy;
-  </footer>
-  <script src="script/dom.js"></script>
-  <script src="script/fetch.js"></script>  
-</body>
+    <input type="submit" value="Sign up"/>
+  </form>
+</section>
+  </body>
 </html>

@@ -15,7 +15,7 @@ const login = (req, res) => {
             if (success) {
               jwt.sign(req.body.useremail, process.env.secretkey, (error, token) => {
                 if (token) {
-                  res.cookie('name', token).redirect('/');
+                  res.cookie('name', token).redirect('/main.html');
                 }
               });
             }
