@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <title>Blogger</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h3>Blogger</h3>
+    <div class="header--shortcuts">
+    <p class="show-create-post">Create Post</p>
+    <p class="signout">Signout</p>
+
+  </div>
+  </header>
+ 
+  <form action="/add-post" method="POST" class="create-post-form form ">
+    <div class="form-popup">
+    <div class="form--fieldset">
+      
+      <legend>Create Post:</legend>
+      <label for="name">Title:</label>
+      <input type="text" name="name" id="name" required>
+      <label for="image">Photo URL:</label>
+      <input type="url" name="image" id="image" required>
+      <label for="description">Post Text:</label>
+      <textarea name="description" id="description" cols="30" rows="10" >
+      </textarea>
+        <button class="form-btn" type="submit">submit</button>
+        <button  type="button" class="form-exit">cancel</button>
+        </div>
+      </div>
+    </form>
+  <main>
+    <section class="container">
+      <article class="container__post">
+        <img src="https://via.placeholder.com/300" alt="">
+        <div class="posts__container__info">
+          <h2 class="title">title main lorem ipsum</h2>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quibusdam!</p>
+        </div>
+        
+      </article>
+      <article class="container__post">
+        <img src="https://via.placeholder.com/300" alt="">
+        <div class="posts__container__info">
+          <h2 class="title">title main lorem ipsum</h2>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quibusdam!</p>
+        </div>
+        
+      </article>
+
+      
+    </section>
+  </main>
+  <a href="/"><h>please Login in</h1></a>
+  <footer>blogger 2020 &copy;
+  </footer>
+  <script src="script/dom.js"></script>
+  <script src="script/fetch.js"></script>  
+</body>
+</html>
