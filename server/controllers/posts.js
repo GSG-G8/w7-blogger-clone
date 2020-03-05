@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const getPosts = require('../Database/query/getPosts');
 
 
-const posts = (req, res) => {
+const posts = (req, res, next) => {
   jwt.verify(req.cookies.name, process.env.secretkey, (err, decoded) => {
     if (err) {
       console.log(err);
@@ -11,7 +11,9 @@ const posts = (req, res) => {
     } else {
       getPosts()
         .then((result) => res.json(result.rows))
-        .catch(console.error());
+        .catch((err) => {
+          next(err);
+        });
     }
   });
 };
