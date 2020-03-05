@@ -4,7 +4,7 @@ const signup = require('./signup');
 const posts = require('./posts');
 const addPost = require('./addPost');
 const login = require('./login');
-const logout = require('./logout')
+const logout = require('./logout');
 
 
 router.get('/posts', posts);
