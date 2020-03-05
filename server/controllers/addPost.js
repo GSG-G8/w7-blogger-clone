@@ -2,7 +2,7 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const addPosts = require('../Database/query/addPosts');
 
-const addPost = (req, res) => {
+const addPost = (req, res, next) => {
   console.log(req.cookies);
   jwt.verify(req.cookies.name, process.env.secretkey, (err, decoded) => {
     if (err) {
@@ -11,8 +11,10 @@ const addPost = (req, res) => {
     } else {
       const data = req.body;
       addPosts(data)
-        .then(() => res.redirect('/'))
-        .catch(console.error());
+        .then(() => res.redirect('/main.html'))
+        .catch((err) => {
+          next(err);
+        });
     }
   });
 };
